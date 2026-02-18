@@ -39,11 +39,11 @@ export default defineNuxtConfig({
     preset: 'cloudflare-pages',
     alias: {
       // 将 mongodb 的可选依赖指向 unenv 提供的空模块
-      '@mongodb-js/zstd': 'unenv/runtime/mock/empty',
-      'snappy': 'unenv/runtime/mock/empty',
-      'kerberos': 'unenv/runtime/mock/empty',
-      'aws4': 'unenv/runtime/mock/empty',
-      'mongodb-client-encryption': 'unenv/runtime/mock/empty',
+      '@mongodb-js/zstd': './empty.js',
+      'snappy': './empty.js',
+      'kerberos': './empty.js',
+      'aws4': './empty.js',
+      'mongodb-client-encryption': './empty.js',
       // 如果还有其他类似依赖，可继续添加
     }
   },
