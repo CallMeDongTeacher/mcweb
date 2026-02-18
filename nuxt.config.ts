@@ -37,16 +37,14 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     preset: 'cloudflare-pages',
-    rollupConfig: {
-      alias: {
-        // 将 mongodb 的可选依赖指向空模块
-        '@mongodb-js/zstd': 'unenv/runtime/mock/empty',
-        'snappy': 'unenv/runtime/mock/empty',
-        'kerberos': 'unenv/runtime/mock/empty',
-        'aws4': 'unenv/runtime/mock/empty',
-        'mongodb-client-encryption': 'unenv/runtime/mock/empty',
-        // 如果还有其他类似依赖，也可以加在这里
-      }
+    alias: {
+      // 将 mongodb 的可选依赖指向 unenv 提供的空模块
+      '@mongodb-js/zstd': 'unenv/runtime/mock/empty',
+      'snappy': 'unenv/runtime/mock/empty',
+      'kerberos': 'unenv/runtime/mock/empty',
+      'aws4': 'unenv/runtime/mock/empty',
+      'mongodb-client-encryption': 'unenv/runtime/mock/empty',
+      // 如果还有其他类似依赖，可继续添加
     }
   },
   experimental: {
