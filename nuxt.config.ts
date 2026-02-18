@@ -36,6 +36,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     compressPublicAssets: true,
+    preset: 'cloudflare-pages',
     rollupConfig: {
       alias: {
         // 将 mongodb 的可选依赖指向空模块
