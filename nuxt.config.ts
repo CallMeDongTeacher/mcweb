@@ -44,6 +44,7 @@ export default defineNuxtConfig({
       'kerberos': './empty.js',
       'aws4': './empty.js',
       'mongodb-client-encryption': './empty.js',
+      '@aws-sdk/credential-providers': './empty.js',
       // 如果还有其他类似依赖，可继续添加
     }
   },
